@@ -1,0 +1,20 @@
+generated: '2026-10-24'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.auto1.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb  1 23:59:59 2027 GMT
+  hsts: true
+  hsts_max_age: 31536000
+domains:
+- domain: auto1.com
+  dnssec: true
+  caa:
+  - 0 issue "amazon.com"
+  - 0 issuewild "amazon.com"
+  - 0 iodef "mailto:devops+security@auto1.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
